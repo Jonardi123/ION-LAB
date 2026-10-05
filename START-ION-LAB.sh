@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
 cd -- "$(dirname -- "$(readlink -f -- "$0")")"
+if [ ! -f ion_lab.py ]; then
+  echo 'ION LAB application source is missing from this folder.' >&2
+  echo 'Use a complete source bundle containing ion_lab.py, its modules, and assets.' >&2
+  exit 1
+fi
 if [ ! -x .venv/bin/python ]; then
   echo 'First launch: preparing ION LAB...'
   python3 -m venv .venv || { echo 'Could not create the Python environment. Check python3 venv support.'; exit 1; }

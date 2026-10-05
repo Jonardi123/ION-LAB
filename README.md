@@ -4,7 +4,9 @@ A local-first desktop viewer for your Ion training runs. **v4.2** keeps the simp
 
 ## Install on Gentoo / Linux
 
-Download `ion-lab-v4.2.zip`, save it to `~/Downloads`, then run:
+This Git checkout currently contains only launch scripts and documentation; the application modules, icon, demo and tests are missing. No downloadable GitHub release has been published in this repository yet. A clone cannot start ION LAB until the full source is added.
+
+If you already have the complete `ion-lab-v4.2.zip` source bundle, save it to `~/Downloads`, then run:
 
 ```bash
 cd ~/Downloads && unzip -o ion-lab-v4.2.zip && bash ion-lab/START-ION-LAB.sh
@@ -34,7 +36,7 @@ Planned-step configurations: `training_args.json`, `training_config.json`, `trai
 
 ## Test
 
-From the extracted `ion-lab` folder:
+From a complete extracted `ion-lab` source folder (the tests are not in this checkout):
 
 ```bash
 python3 -m unittest discover -s tests -v
